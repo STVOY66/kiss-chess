@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>K.I.S.S. Chess</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="game">
+            <script defer src="./scripts/game.js"></script>
+            <div id="board">
+                <div class="pieces">
+                    <div class="white-pieces">
+                        <div data-player="white" data-piece="pawn" class="piece" style="transform: translate(0px, 80px)">
+                            <img src="./assets/pieces/pl.svg" alt="White pawn.">
+                        </div>
+                        <div data-player="white" data-piece="pawn" class="piece" style="transform: translate(80px, 80px)">
+                            <img src="./assets/pieces/pl.svg" alt="White pawn.">
+                        </div>
+                        <div data-player="white" data-piece="pawn" class="piece" style="transform: translate(160px, 80px)">
+                            <img src="./assets/pieces/pl.svg" alt="White pawn.">
+                        </div>
+                        <div data-player="white" data-piece="pawn" class="piece" style="transform: translate(240px, 80px)">
+                            <img src="./assets/pieces/pl.svg" alt="White pawn.">
+                        </div>
+                        <div data-player="white" data-piece="pawn" class="piece" style="transform: translate(320px, 80px)">
+                            <img src="./assets/pieces/pl.svg" alt="White pawn.">
+                        </div>
+                        <div data-player="white" data-piece="pawn" class="piece" style="transform: translate(400px, 80px)">
+                            <img src="./assets/pieces/pl.svg" alt="White pawn.">
+                        </div>
+                        <div data-player="white" data-piece="pawn" class="piece" style="transform: translate(480px, 80px)">
+                            <img src="./assets/pieces/pl.svg" alt="White pawn.">
+                        </div>
+                        <div data-player="white" data-piece="pawn" class="piece" style="transform: translate(560px, 80px)">
+                            <img src="./assets/pieces/pl.svg" alt="White pawn.">
+                        </div>
+                        <div data-player="white" data-piece="rook" class="piece" style="transform: translate(0px, 0px)">
+                            <img src="./assets/pieces/rl.svg" alt="White rook.">
+                        </div>
+                        <div data-player="white" data-piece="rook" class="piece" style="transform: translate(560px, 0px)">
+                            <img src="./assets/pieces/rl.svg" alt="White rook.">
+                        </div>
+                        <div data-player="white" data-piece="bishop" class="piece" style="transform: translate(160px, 0px)">
+                            <img src="./assets/pieces/bl.svg" alt="White bishop.">
+                        </div>
+                        <div data-player="white" data-piece="bishop" class="piece" style="transform: translate(400px, 0px)">
+                            <img src="./assets/pieces/bl.svg" alt="White bishop.">
+                        </div>
+                        <div data-player="white" data-piece="knight" class="piece" style="transform: translate(80px, 0px)">
+                            <img src="./assets/pieces/nl.svg" alt="White knight.">
+                        </div>
+                        <div data-player="white" data-piece="knight" class="piece" style="transform: translate(480px, 0px)">
+                            <img src="./assets/pieces/nl.svg" alt="White knight.">
+                        </div>
+                        <div data-player="white" data-piece="king" class="piece" style="transform: translate(240px, 0px)">
+                            <img src="./assets/pieces/kl.svg" alt="White king.">
+                        </div>
+                        <div data-player="white" data-piece="queen" class="piece" style="transform: translate(320px, 0px)">
+                            <img src="./assets/pieces/ql.svg" alt="White queen.">
+                        </div>
+                    </div>
+                    <div class="black-pieces">
+                        <div data-player="black" data-piece="pawn" class="piece" style="transform: translate(0px, 480px)">
+                            <img src="./assets/pieces/pd.svg" alt="Black pawn.">
+                        </div>
+                        <div data-player="black" data-piece="pawn" class="piece" style="transform: translate(80px, 480px)">
+                            <img src="./assets/pieces/pd.svg" alt="Black pawn.">
+                        </div>
+                        <div data-player="black" data-piece="pawn" class="piece" style="transform: translate(160px, 480px)">
+                            <img src="./assets/pieces/pd.svg" alt="Black pawn.">
+                        </div>
+                        <div data-player="black" data-piece="pawn" class="piece" style="transform: translate(240px, 480px)">
+                            <img src="./assets/pieces/pd.svg" alt="Black pawn.">
+                        </div>
+                        <div data-player="black" data-piece="pawn" class="piece" style="transform: translate(320px, 480px)">
+                            <img src="./assets/pieces/pd.svg" alt="Black pawn.">
+                        </div>
+                        <div data-player="black" data-piece="pawn" class="piece" style="transform: translate(400px, 480px)">
+                            <img src="./assets/pieces/pd.svg" alt="Black pawn.">
+                        </div>
+                        <div data-player="black" data-piece="pawn" class="piece" style="transform: translate(480px, 480px)">
+                            <img src="./assets/pieces/pd.svg" alt="Black pawn.">
+                        </div>
+                        <div data-player="black" data-piece="pawn" class="piece" style="transform: translate(560px, 480px)">
+                            <img src="./assets/pieces/pd.svg" alt="Black pawn.">
+                        </div>
+                        <div data-player="black" data-piece="rook" class="piece" style="transform: translate(0px, 560px)">
+                            <img src="./assets/pieces/rd.svg" alt="Black rook.">
+                        </div>
+                        <div data-player="black" data-piece="rook" class="piece" style="transform: translate(560px, 560px)">
+                            <img src="./assets/pieces/rd.svg" alt="Black rook.">
+                        </div>
+                        <div data-player="black" data-piece="bishop" class="piece" style="transform: translate(160px, 560px)">
+                            <img src="./assets/pieces/bd.svg" alt="Black bishop.">
+                        </div>
+                        <div data-player="black" data-piece="bishop" class="piece" style="transform: translate(400px, 560px)">
+                            <img src="./assets/pieces/bd.svg" alt="Black bishop.">
+                        </div>
+                        <div data-player="black" data-piece="knight" class="piece" style="transform: translate(80px, 560px)">
+                            <img src="./assets/pieces/nd.svg" alt="Black knight.">
+                        </div>
+                        <div data-player="black" data-piece="knight" class="piece" style="transform: translate(480px, 560px)">
+                            <img src="./assets/pieces/nd.svg" alt="Black knight.">
+                        </div>
+                        <div data-player="black" data-piece="king" class="piece" style="transform: translate(320px, 560px)">
+                            <img src="./assets/pieces/kd.svg" alt="Black king.">
+                        </div>
+                        <div data-player="black" data-piece="queen" class="piece" style="transform: translate(240px, 560px)">
+                            <img src="./assets/pieces/qd.svg" alt="Black queen.">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div data-col="a" data-row="1" class="square"></div>
+                    <div data-col="b" data-row="1" class="square"></div>
+                    <div data-col="c" data-row="1" class="square"></div>
+                    <div data-col="d" data-row="1" class="square"></div>
+                    <div data-col="e" data-row="1" class="square"></div>
+                    <div data-col="f" data-row="1" class="square"></div>
+                    <div data-col="g" data-row="1" class="square"></div>
+                    <div data-col="h" data-row="1" class="square"></div>
+                </div>
+                <div class="row">
+                    <div data-col="a" data-row="2" class="square"></div>
+                    <div data-col="b" data-row="2" class="square"></div>
+                    <div data-col="c" data-row="2" class="square"></div>
+                    <div data-col="d" data-row="2" class="square"></div>
+                    <div data-col="e" data-row="2" class="square"></div>
+                    <div data-col="f" data-row="2" class="square"></div>
+                    <div data-col="g" data-row="2" class="square"></div>
+                    <div data-col="h" data-row="2" class="square"></div>
+                </div>
+                <div class="row">
+                    <div data-col="a" data-row="3" class="square"></div>
+                    <div data-col="b" data-row="3" class="square"></div>
+                    <div data-col="c" data-row="3" class="square"></div>
+                    <div data-col="d" data-row="3" class="square"></div>
+                    <div data-col="e" data-row="3" class="square"></div>
+                    <div data-col="f" data-row="3" class="square"></div>
+                    <div data-col="g" data-row="3" class="square"></div>
+                    <div data-col="h" data-row="3" class="square"></div>
+                </div>
+                <div class="row">
+                    <div data-col="a" data-row="4" class="square"></div>
+                    <div data-col="b" data-row="4" class="square"></div>
+                    <div data-col="c" data-row="4" class="square"></div>
+                    <div data-col="d" data-row="4" class="square"></div>
+                    <div data-col="e" data-row="4" class="square"></div>
+                    <div data-col="f" data-row="4" class="square"></div>
+                    <div data-col="g" data-row="4" class="square"></div>
+                    <div data-col="h" data-row="4" class="square"></div>
+                </div>
+                <div class="row">
+                    <div data-col="a" data-row="5" class="square"></div>
+                    <div data-col="b" data-row="5" class="square"></div>
+                    <div data-col="c" data-row="5" class="square"></div>
+                    <div data-col="d" data-row="5" class="square"></div>
+                    <div data-col="e" data-row="5" class="square"></div>
+                    <div data-col="f" data-row="5" class="square"></div>
+                    <div data-col="g" data-row="5" class="square"></div>
+                    <div data-col="h" data-row="5" class="square"></div>
+                </div>
+                <div class="row">
+                    <div data-col="a" data-row="6" class="square"></div>
+                    <div data-col="b" data-row="6" class="square"></div>
+                    <div data-col="c" data-row="6" class="square"></div>
+                    <div data-col="d" data-row="6" class="square"></div>
+                    <div data-col="e" data-row="6" class="square"></div>
+                    <div data-col="f" data-row="6" class="square"></div>
+                    <div data-col="g" data-row="6" class="square"></div>
+                    <div data-col="h" data-row="6" class="square"></div>
+                </div>
+                <div class="row">
+                    <div data-col="a" data-row="7" class="square"></div>
+                    <div data-col="b" data-row="7" class="square"></div>
+                    <div data-col="c" data-row="7" class="square"></div>
+                    <div data-col="d" data-row="7" class="square"></div>
+                    <div data-col="e" data-row="7" class="square"></div>
+                    <div data-col="f" data-row="7" class="square"></div>
+                    <div data-col="g" data-row="7" class="square"></div>
+                    <div data-col="h" data-row="7" class="square"></div>
+                </div>
+                <div class="row">
+                    <div data-col="a" data-row="8" class="square"></div>
+                    <div data-col="b" data-row="8" class="square"></div>
+                    <div data-col="c" data-row="8" class="square"></div>
+                    <div data-col="d" data-row="8" class="square"></div>
+                    <div data-col="e" data-row="8" class="square"></div>
+                    <div data-col="f" data-row="8" class="square"></div>
+                    <div data-col="g" data-row="8" class="square"></div>
+                    <div data-col="h" data-row="8" class="square"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

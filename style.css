@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e8e8e8;
+}
+
+#board {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    position: relative;
+}
+
+.row {
+    display: flex;
+}
+
+.square {
+    width: 80px;
+    height: 80px;
+}
+
+.piece > img {
+    width: 80px;
+    height: 80px;
+}
+
+.row:nth-of-type(odd) .square:nth-of-type(odd),
+.row:nth-of-type(even) .square:nth-of-type(even) {
+    background-color: #ffe3a8;
+}
+
+.row:nth-of-type(odd) .square:nth-of-type(even),
+.row:nth-of-type(even) .square:nth-of-type(odd) {
+    background-color: #b38e40;
+}
+
+.piece {
+    position: absolute;
+}
