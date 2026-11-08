@@ -1,3 +1,18 @@
+:root {
+    --white-pawn: url("./assets/pieces/pl.svg" );
+    --white-knight: url("./assets/pieces/nl.svg" );
+    --white-bishop: url("./assets/pieces/bl.svg" );
+    --white-rook: url("./assets/pieces/rl.svg" );
+    --white-queen: url("./assets/pieces/ql.svg" );
+    --white-king: url("./assets/pieces/kl.svg" );
+    --black-pawn: url("./assets/pieces/pd.svg" );
+    --black-knight: url("./assets/pieces/nd.svg" );
+    --black-bishop: url("./assets/pieces/bd.svg" );
+    --black-rook: url("./assets/pieces/rd.svg" );
+    --black-queen: url("./assets/pieces/qd.svg" );
+    --black-king: url("./assets/pieces/kd.svg" );
+}
+
 *,
 *::before,
 *::after {
@@ -15,6 +30,7 @@ body {
     place-content: center;
     height: 100vh;
     position: relative;
+    user-select: none;
 }
 
 .row {
@@ -26,9 +42,34 @@ body {
     height: 80px;
 }
 
-.piece > img {
+.piece {
     width: 80px;
     height: 80px;
+    cursor: grab;
+    background-size: contain;
+    position: absolute;
+
+    &.white {
+        &.pawn { background-image: var(--white-pawn); }
+        &.rook { background-image: var(--white-rook); }
+        &.knight { background-image: var(--white-knight); }
+        &.bishop { background-image: var(--white-bishop); }
+        &.king { background-image: var(--white-king); }
+        &.queen { background-image: var(--white-queen); }
+    }
+
+    &.black {
+        &.pawn { background-image: var(--black-pawn); }
+        &.rook { background-image: var(--black-rook); }
+        &.knight { background-image: var(--black-knight); }
+        &.bishop { background-image: var(--black-bishop); }
+        &.king { background-image: var(--black-king); }
+        &.queen { background-image: var(--black-queen); }
+    }
+}
+
+.piece:active {
+    cursor: grabbing;
 }
 
 .row:nth-of-type(odd) .square:nth-of-type(odd),
