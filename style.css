@@ -25,46 +25,61 @@ body {
     background-color: #e8e8e8;
 }
 
+#game {
+    height: 75vh;
+    width: 75vh;
+}
+
+.pieces,
+.white-pieces,
+.black-pieces {
+    display: contents;
+    height: 100%;
+    width: 100%;
+}
+
 #board {
-    display: grid;
     place-content: center;
-    height: 100vh;
+    height: 100%;
+    width: auto;
     position: relative;
     user-select: none;
 }
 
 .row {
     display: flex;
+    width: 100%;
+    height: 12.5%;
 }
 
 .square {
-    width: 80px;
-    height: 80px;
+    width: 12.5%;
+    height: 100%;
 }
 
 .piece {
-    width: 80px;
-    height: 80px;
+    width: 12.5%;
+    height: 12.5%;
     cursor: grab;
     background-size: contain;
     position: absolute;
 
     &.white {
-        &.pawn { background-image: var(--white-pawn); }
-        &.rook { background-image: var(--white-rook); }
-        &.knight { background-image: var(--white-knight); }
-        &.bishop { background-image: var(--white-bishop); }
-        &.king { background-image: var(--white-king); }
-        &.queen { background-image: var(--white-queen); }
+        &[data-piece="pawn"] { background-image: var(--white-pawn); }
+        &[data-piece="rook"] { background-image: var(--white-rook); }
+        &[data-piece="knight"] { background-image: var(--white-knight); }
+        &[data-piece="bishop"] { background-image: var(--white-bishop); }
+        &[data-piece="king"] { background-image: var(--white-king); }
+        &[data-piece="queen"] { background-image: var(--white-queen); }
     }
 
     &.black {
-        &.pawn { background-image: var(--black-pawn); }
-        &.rook { background-image: var(--black-rook); }
-        &.knight { background-image: var(--black-knight); }
-        &.bishop { background-image: var(--black-bishop); }
-        &.king { background-image: var(--black-king); }
-        &.queen { background-image: var(--black-queen); }
+        &[data-piece="pawn"] { background-image: var(--black-pawn); }
+        &[data-piece="rook"] { background-image: var(--black-rook); }
+        &[data-piece="knight"] { background-image: var(--black-knight); }
+        &[data-piece="bishop"] { background-image: var(--black-bishop); }
+        &[data-piece="king"] { background-image: var(--black-king); }
+        &[data-piece="queen"] { background-image: var(--black-queen); }
     }
 }
 
