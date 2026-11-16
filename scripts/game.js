@@ -1,12 +1,8 @@
-/*
- * TODO: Center piece on cursor on selection.
- * */
-
-
 const white_pieces = document.querySelectorAll('.white-pieces')[0].children;
 const black_pieces = document.querySelectorAll('.black-pieces')[0].children;
 const all_pieces = document.querySelectorAll('.piece');
 const pieceRanks = ["12.5%", "0%", "75%", "87.5%"]
+const defPieceZ = window.getComputedStyle(document.querySelector('.pieces')).getPropertyValue("z-index");
 var whiteRank = 2, blackRank = 0;
 var playSide = "white";
 var turnSide = "white";
@@ -40,15 +36,20 @@ var origPos = [0, 0];
 function mousedown(event) {
     isDown = true;
     actPiece = event.currentTarget;
+    // offset = [actPiece.offsetLeft - event.clientX, actPiece.offsetTop - event.clientY];
     offset = [actPiece.offsetLeft - event.clientX, actPiece.offsetTop - event.clientY];
     origPos = [actPiece.style.left, actPiece.style.top];
     document.addEventListener("mousemove", movePiece, true);
+    actPiece.style.left = (event.clientX - (actPiece.offsetWidth/2)) + "px";
+    actPiece.style.top = (event.clientY - (actPiece.offsetHeight/2)) + "px";
+    actPiece.style.zIndex = defPieceZ + 1;
 }
 
 function mouseup(event) {
     idDown = false;
     actPiece.style.left = origPos[0];
     actPiece.style.top = origPos[1];
+    actPiece.style.zIndex = defPieceZ;
     actPiece = null;
     document.removeEventListener("mousemove", movePiece, true);
 }
@@ -56,8 +57,8 @@ function mouseup(event) {
 function movePiece(event) {
     event.preventDefault();
     if(isDown) {
-        actPiece.style.left = (event.clientX + offset[0]) + "px";
-        actPiece.style.top = (event.clientY + offset[1]) + "px";
+        actPiece.style.left = (event.clientX - (actPiece.offsetWidth/2)) + "px";
+        actPiece.style.top = (event.clientY - (actPiece.offsetHeight/2)) + "px";
     }
 }
 
